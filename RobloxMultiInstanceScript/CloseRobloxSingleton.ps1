@@ -1,5 +1,5 @@
 # Configuration
-$HandleExe   = ""
+$HandleExe   = "" # Put the path to handle.exe in between these quotes
 
 # Variables
 $ProcessName = "RobloxPlayerBeta.exe"
