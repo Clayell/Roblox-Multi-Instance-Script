@@ -5,10 +5,20 @@ $HandleExe   = ""
 $ProcessName = "RobloxPlayerBeta.exe"
 $EventName   = "ROBLOX_singletonEvent"
 $PollingInterval = 1  # seconds between handle checks
+$LogFile = Join-Path -Path $PSScriptRoot -ChildPath "CloseRobloxSingleton.txt"
+
+# Clear log at start
+"" | Out-File -FilePath $LogFile -Encoding UTF8
 
 function Write-Log($message) {
-    $timestamp = Get-Date -Format "HH:mm:ss"
-    Write-Host "$timestamp - $message"
+    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    $line = "$timestamp - $message"
+
+    Add-Content -Path $LogFile -Value $line
+
+    if ($Host.UI.RawUI) {
+        Write-Host $line
+    }
 }
 
 Write-Log "Persistent watcher started for $ProcessName."
