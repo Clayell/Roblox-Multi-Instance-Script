@@ -17,4 +17,5 @@ Instructions:
 
 
 The script will then automatically close the `ROBLOX_singletonEvent` event handle when it appears, allowing you to run as many instances of Roblox as you wish. It will continuously run, so if you close Roblox and open it again it will still close the event handle as normal. To stop the script, close the Powershell window.
+
 This script only works on OSs that can run .ps1 scripts. On non-Windows systems, Powershell may need to be downloaded as well.
