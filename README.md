@@ -8,7 +8,7 @@ Normal Instructions: (will automatically run at startup)
 * Put the path to `handle.exe` in $HandleExe
   * Example: `$HandleExe   = "C:\Users\Clayel\Downloads\Handle\handle.exe"`
 * Save and close CloseRobloxSingleton.ps1
-* Run Powershell (not Command Prompt) as Administrator (Handle requires Administrator permissions to function)
+* Run Powershell (not Command Prompt) as Administrator (Task Scheduler/Handle requires Administrator permissions to function)
   * Open taskbar, type in Powershell, right click, hit "Run as Administrator"
 * Navigate to the folder where the script is downloaded
   * Example: `cd C:\Users\Clayel\Downloads\RobloxMultiInstanceScript`
