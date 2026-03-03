@@ -24,7 +24,7 @@ You can confirm it is running by looking at the logs in CloseRobloxSingleton.txt
 ![The task in task scheduler](https://i.imgur.com/l1UXQ58.png)
 ![The txt file output](https://i.imgur.com/RQ4I5Nf.png)
 
-The script schedules another script to automatically open on the computer's startup or when it awakes from sleep. This scheduled script will then automatically close the `ROBLOX_singletonEvent` event handle when it appears, allowing you to run as many instances of Roblox as you wish. It will continuously run, so if you close Roblox and open it again it will still close the event handle as normal. To stop the script, terminate all Powershell processes in Task Manager, and disable/delete the task in Task Scheduler.
+The script schedules another script to automatically open on the computer's startup or when it awakes from sleep, and then run that script. This scheduled script will then automatically close the `ROBLOX_singletonEvent` event handle when it appears, allowing you to run as many instances of Roblox as you wish. It will continuously run, so if you close Roblox and open it again it will still close the event handle as normal. To stop the script, terminate all Powershell processes in Task Manager, and disable/delete the task in Task Scheduler.
 
 ---
 
