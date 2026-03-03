@@ -12,6 +12,7 @@ Instructions:
   * Example: `cd C:\Users\Clayel\Downloads`
 * Allow the script to be run as an Administrator
   * ``Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass``
+  * Type `Y` or `y` to allow it to be run
 * Run the script
   * `.\CloseRobloxSingleton.ps1`
 
