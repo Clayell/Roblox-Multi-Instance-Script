@@ -54,4 +54,6 @@ The script automatically closes the `ROBLOX_singletonEvent` event handle when it
 
 Due to Handle being Windows-specific, this script only works on Windows operating systems.
 
+You can also verify it is working by downloading [Process Explorer](https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer), running `procexp.exe` as an Administrator, typing in Roblox, and then looking at its handles. You will see `ROBLOX_singletonEvent` briefly appear as an Event before it is deleted by this script.
+
 Generously made by ChatGPT in about 4 hours of debugging. (I certainly don't know how to code in Powershell's language, heh)
