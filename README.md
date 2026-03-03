@@ -9,14 +9,15 @@ Instructions:
 * Run Powershell (not Command Prompt) as Administrator (Handle requires Administrator permissions to function)
   * Open taskbar, type in Powershell, right click, hit "Run as Administrator"
 * Navigate to the folder where the script is downloaded
-  * Example: `cd C:\Users\Clayel\Downloads`
+  * Example: `cd C:\Users\Clayel\Downloads\RobloxMultiInstanceScript`
 * Allow the script to be run as an Administrator
   * ``Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass``
   * Type `Y` or `y` to allow it to be run
 * Run the script
   * `.\CloseRobloxSingleton.ps1`
 
-![Using the Script](https://i.imgur.com/sdw9UTg.png)
+![Using the Script](https://i.imgur.com/380R48Z.png)
+![The txt file output](https://i.imgur.com/RQ4I5Nf.png)
 
 The script will then automatically close the `ROBLOX_singletonEvent` event handle when it appears, allowing you to run as many instances of Roblox as you wish. It will continuously run, so if you close Roblox and open it again it will still close the event handle as normal. To stop the script, close the Powershell window.
 
