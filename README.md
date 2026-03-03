@@ -56,4 +56,6 @@ Due to Handle being Windows-specific, this script only works on Windows operatin
 
 You can also verify it is working by downloading [Process Explorer](https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer), running `procexp.exe` as an Administrator, typing in Roblox, and then looking at its handles. You will see `ROBLOX_singletonEvent` briefly appear as an Event before it is deleted by this script.
 
+![Process explorer](https://i.imgur.com/0nnV4Wk.png)
+
 Generously made by ChatGPT in about 4 hours of debugging. (I certainly don't know how to code in Powershell's language, heh)
