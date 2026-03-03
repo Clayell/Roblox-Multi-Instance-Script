@@ -1,6 +1,8 @@
 # Roblox-Multi-Instance-Script
 
 Instructions:
+* Download this repository and unzip it
+  * Green Code Button in Top Right -> Download ZIP -> Right click on file -> Extract All -> Extract
 * Download [Handle](https://learn.microsoft.com/en-us/sysinternals/downloads/handle) (a tool from Microsoft's Sysinternals)
 * Open CloseRobloxSingleton.ps1 in a text editor
 * Put the path to `handle.exe` in $HandleExe
@@ -23,4 +25,4 @@ The script will then automatically close the `ROBLOX_singletonEvent` event handl
 
 Due to Handle being Windows-specific, this script only works on Windows operating systems.
 
-Generously made by ChatGPT in about 2 hours of debugging. (I certainly don't know how to code in Powershell's language, heh)
+Generously made by ChatGPT in about 3 hours of debugging. (I certainly don't know how to code in Powershell's language, heh)
