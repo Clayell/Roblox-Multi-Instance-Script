@@ -1,5 +1,5 @@
 # Configuration
-$HandleExe   = "" # Put the path to handle.exe (https://learn.microsoft.com/en-us/sysinternals/downloads/handle) in between these quotes
+$HandleExe   = "C:\Users\Clayel\Downloads\Handle\handle.exe" # Put the path to handle.exe (https://learn.microsoft.com/en-us/sysinternals/downloads/handle) in between these quotes
 
 # Variables
 $ProcessName = "RobloxPlayerBeta.exe"
@@ -37,7 +37,14 @@ try {
         # Poll handles until the event appears
         $handleClosed = $false
         while (-not $handleClosed) {
+            $proc = Get-Process -Id $processId -ErrorAction SilentlyContinue
+            if (-not $proc) {
+                Write-Log "Process $processId has exited before the handle was detected. Stopping handle polling."
+                break
+            }
+            
             $output = & $HandleExe -p $processId -a 2>$null
+            # Write-Log ($output -join "`n")
             $handles = foreach ($line in $output) {
                 if ($line -match "^\s*([0-9A-F]+):\s+Event\s+.*$EventName") {
                     $matches[1]
@@ -46,11 +53,13 @@ try {
 
             if ($handles) {
                 foreach ($h in $handles) {
-                    Write-Log "Closing handle $h for PID $processId."
                     & $HandleExe -c $h -p $processId -y
+                    Write-Log "Handle $h closed for PID $processId."
                 }
                 $handleClosed = $true
-                Write-Log "Event handle closed for PID $processId."
+            }
+            else {
+                # Write-Log "Handle not detected yet."
             }
 
             Start-Sleep -Seconds $PollingInterval
