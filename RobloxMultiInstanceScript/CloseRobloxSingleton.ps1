@@ -1,5 +1,5 @@
 # Configuration
-$HandleExe   = "C:\Users\Clayel\Downloads\Handle\handle.exe" # Put the path to handle.exe (https://learn.microsoft.com/en-us/sysinternals/downloads/handle) in between these quotes
+$HandleExe   = "" # Put the path to handle.exe (https://learn.microsoft.com/en-us/sysinternals/downloads/handle) in between these quotes
 
 # Variables
 $ProcessName = "RobloxPlayerBeta.exe"
